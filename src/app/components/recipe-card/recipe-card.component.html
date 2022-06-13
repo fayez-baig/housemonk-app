@@ -1,0 +1,19 @@
+<mat-card class="recipe-card" (click)="handleRecipeDetails(recipe.recipe.uri)">
+  <img
+    mat-card-image
+    [src]="recipe.recipe.images.REGULAR.url"
+    [alt]="recipe.recipe.label"
+  />
+  <mat-card-header>
+    <mat-card-title>{{ recipe.recipe.label }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-actions class="recipe-card-footer">
+    <button mat-button>{{ recipe.recipe.calories | number }} calories</button>
+    <button mat-button>
+      {{ recipe.recipe.ingredients.length }} Ingredients
+    </button>
+    <mat-card-header>
+      <mat-card-subtitle>{{ recipe.recipe.source }}</mat-card-subtitle>
+    </mat-card-header>
+  </mat-card-actions>
+</mat-card>
